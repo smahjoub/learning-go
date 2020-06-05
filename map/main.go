@@ -10,6 +10,10 @@ func main() {
 		"blue":  "#0000FF",
 	}
 
+	for color, hex := range colors {
+		fmt.Printf("[%v]=%v\n", color, hex)
+	}
+
 	anotherMap := make(map[int]string)
 
 	anotherMap[0] = "hello"
