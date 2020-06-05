@@ -12,4 +12,11 @@ func main() {
 
 	p := person{firstName: "Saif Eddine", lastName: "Mahjoub"}
 	fmt.Println(p)
+
+	var p2 person
+
+	p2.firstName = "Alex"
+	p2.lastName = "Andersson"
+
+	fmt.Printf("%+v", p2)
 }
