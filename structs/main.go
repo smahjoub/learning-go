@@ -13,6 +13,14 @@ type person struct {
 	contactInfo
 }
 
+func (p person) print() {
+	fmt.Printf("%+v", p)
+}
+
+func (p *person) updateFirstName(firstName string) {
+	(*p).firstName = firstName
+}
+
 func main() {
 	// p := person{"Saif Eddine", "Mahjoub"}
 
@@ -24,7 +32,11 @@ func main() {
 			zipCode: "75000",
 		},
 	}
-	fmt.Println(p)
+
+	pp := &p
+	pp.updateFirstName("Saif")
+
+	p.print()
 
 	var p2 person
 
@@ -34,5 +46,6 @@ func main() {
 		email:   "se.mahjoub@mail.com",
 		zipCode: "75000",
 	}
-	fmt.Printf("%+v", p2)
+
+	p2.print()
 }
