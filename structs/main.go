@@ -33,8 +33,7 @@ func main() {
 		},
 	}
 
-	pp := &p
-	pp.updateFirstName("Saif")
+	p.updateFirstName("Saif")
 
 	p.print()
 
