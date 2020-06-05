@@ -10,5 +10,17 @@ func main() {
 		"blue":  "#0000FF",
 	}
 
+	anotherMap := make(map[int]string)
+
+	anotherMap[0] = "hello"
+
+	anotherMap[1] = "world"
+
 	fmt.Println(colors)
+
+	fmt.Println(anotherMap)
+
+	delete(anotherMap, 1)
+
+	fmt.Println(anotherMap)
 }
