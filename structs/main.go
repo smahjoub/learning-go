@@ -8,9 +8,9 @@ type contactInfo struct {
 }
 
 type person struct {
-	firstName   string
-	lastName    string
-	contactInfo contactInfo
+	firstName string
+	lastName  string
+	contactInfo
 }
 
 func main() {
