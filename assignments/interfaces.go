@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 type shape interface {
-	printArea()
+	printArea() float64
 }
 
 type square struct {
@@ -14,16 +14,20 @@ type triangle struct {
 	base   float64
 }
 
-func (s square) printArea() {
+func (s square) printArea() float64 {
 	area := s.sideLength * s.sideLength
 
 	fmt.Printf("Sqaure Area : %f\n", area)
+
+	return area
 }
 
-func (t triangle) printArea() {
+func (t triangle) printArea() float64 {
 	area := 0.5 * t.base * t.height
 
 	fmt.Printf("Triangle Area : %f\n", area)
+
+	return area
 }
 
 func main() {
